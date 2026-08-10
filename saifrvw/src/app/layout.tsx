@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
+import SAIFRVWWorkspaceNav from "@/components/SAIFRVWWorkspaceNav";
 
 export const metadata: Metadata = {
   title: "SAIFRVW — Sentinel Security Analyzer",
@@ -36,7 +37,8 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>{children}</body>
+      <body>
+        <SAIFRVWWorkspaceNav />{children}</body>
     </html>
   );
 }

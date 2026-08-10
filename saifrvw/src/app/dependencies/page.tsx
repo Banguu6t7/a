@@ -214,10 +214,10 @@ export default function DependenciesPage() {
 
               <div>
                 <h2 className="font-medium">
-                  Dependency Input
+                  Workspace Dependency Intelligence
                 </h2>
                 <p className="text-xs text-white/40">
-                  Paste package.json or dependency information.
+                  Scan the current SAIFRVW workspace and inspect its installed dependencies.
                 </p>
               </div>
             </div>
@@ -241,7 +241,7 @@ export default function DependenciesPage() {
               <button
                 type="button"
                 onClick={scanDependencies}
-                disabled={loading || !source.trim()}
+                disabled={loading}
                 className="inline-flex items-center gap-2 rounded-xl border border-white/15 bg-white px-4 py-2.5 text-sm font-medium text-black transition hover:bg-white/90 disabled:cursor-not-allowed disabled:opacity-40"
               >
                 {loading ? (
@@ -249,13 +249,13 @@ export default function DependenciesPage() {
                 ) : (
                   <Search className="h-4 w-4" />
                 )}
-                {loading ? "Scanning..." : "Scan Dependencies"}
+                {loading ? "Scanning Workspace..." : "Scan Workspace"}
               </button>
 
               <button
                 type="button"
                 onClick={() => {
-                  setSource("");
+                  
                   setResult(null);
                   setError("");
                 }}

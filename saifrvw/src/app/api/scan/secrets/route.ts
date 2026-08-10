@@ -3,7 +3,7 @@ import { scanSecrets } from "@/lib/security/secretScanner";
 
 export async function POST(request: Request) {
   try {
-    const body = await request.json();
+    const body = await request.json().catch(() => null);
 
     if (!body || typeof body.code !== "string") {
       return NextResponse.json(
