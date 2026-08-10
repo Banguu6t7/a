@@ -1,0 +1,135 @@
+
+============================================================
+ SAIFRVW — SENTINEL PRODUCTION LOCK
+ CLEAN BUILD • API JSON VALIDATION • VERCEL READY
+============================================================
+
+[1/12] Checking project...
+✓ Project OK
+
+[2/12] Snapshotting current Sentinel implementation...
+✓ Backup created: /workspaces/a/saifrvw/.saifrvw-production-20260810-192339
+
+[3/12] Killing stale Next.js processes...
+✓ Stale Next processes cleared
+
+[4/12] Removing corrupted Next build artifacts...
+✓ .next removed
+
+[5/12] Verifying Node/npm...
+v24.14.0
+11.9.0
+✓ Node/npm available
+
+[6/12] Rebuilding dependencies...
+npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated @humanwhocodes/config-array@0.13.0: Use @eslint/config-array instead
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated @humanwhocodes/object-schema@2.0.3: Use @eslint/object-schema instead
+npm warn deprecated glob@10.3.10: Old versions of glob are not supported, and contain widely publicized security vulnerabilities, which have been fixed in the current version. Please update. Support for old versions may be purchased (at exorbitant rates) by contacting i@izs.me
+npm warn deprecated eslint@8.57.1: This version is no longer supported. Please see https://eslint.org/version-support for other options.
+
+added 385 packages, and audited 386 packages in 46s
+
+153 packages are looking for funding
+  run `npm fund` for details
+
+5 high severity vulnerabilities
+
+To address all issues (including breaking changes), run:
+  npm audit fix --force
+
+Run `npm audit` for details.
+✓ Dependencies installed
+
+[7/12] TypeScript verification...
+✓ TypeScript passed
+
+[8/12] Production build...
+
+> saifrvw@0.1.0 build
+> next build
+
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+  ▲ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+
+./src/app/review/page.tsx
+127:9  Warning: The 'findings' logical expression could make the dependencies of useMemo Hook (at line 135) change on every render. To fix this, wrap the initialization of 'findings' in its own useMemo() Hook.  react-hooks/exhaustive-deps
+127:9  Warning: The 'findings' logical expression could make the dependencies of useMemo Hook (at line 166) change on every render. To fix this, wrap the initialization of 'findings' in its own useMemo() Hook.  react-hooks/exhaustive-deps
+
+./src/components/SAIFRVWBrand.tsx
+4:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+   Collecting page data ...
+   Generating static pages (0/15) ...
+   Generating static pages (3/15) 
+   Generating static pages (7/15) 
+   Generating static pages (11/15) 
+ ✓ Generating static pages (15/15)
+   Finalizing page optimization ...
+   Collecting build traces ...
+
+Route (app)                              Size     First Load JS
+┌ ○ /                                    138 B          87.5 kB
+├ ○ /_not-found                          873 B          88.2 kB
+├ ƒ /api/ai                              0 B                0 B
+├ ƒ /api/analyze                         0 B                0 B
+├ ƒ /api/report                          0 B                0 B
+├ ƒ /api/scan/dependencies               0 B                0 B
+├ ƒ /api/scan/secrets                    0 B                0 B
+├ ○ /dependencies                        4.92 kB        92.2 kB
+├ ○ /docs                                12.4 kB        99.7 kB
+├ ○ /pricing                             175 B          96.2 kB
+├ ○ /review                              7.71 kB         104 kB
+└ ○ /secrets                             1.79 kB        89.1 kB
++ First Load JS shared by all            87.3 kB
+  ├ chunks/117-4395ee4f8ee51fe0.js       31.7 kB
+  ├ chunks/fd9d1056-7c837d44b75bb10e.js  53.6 kB
+  └ other shared chunks (total)          1.95 kB
+
+
+○  (Static)   prerendered as static content
+ƒ  (Dynamic)  server-rendered on demand
+
+✓ Production build passed
+
+[9/12] Checking Sentinel routes in build output...
+✓ Dependency engine included
+✓ Dependency API included
+✓ Dependency UI included
+
+[10/12] Starting isolated production server...
+Production PID: 46019
+
+Waiting for production server...
+✓ Production server responding
+
+[11/12] Validating EVERY critical API returns JSON...
+
+--- HOME ---
+HTTP:
+HTTP/1.1 307 Temporary Redirect
+Content-Type:
+Content-Type: text/html; charset=utf-8
+Body preview:
+<!DOCTYPE html><html id="__next_error__"><head><meta charSet="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><link rel="preload" as="script" fetchPriority="low" href="/_next/static/chunks/webpack-a3c37fcbf859f6f9.js"/><script src="/_next/static/chunks/fd9d1056-7c837d44b75bb10e.js" async=""></script><script src="/_next/static/chunks/117-4395ee4f8ee51fe0.js" async=""></script><script src="/_next/static/chunks/main-app-53d23572c3f42bcc.js" async=""></script><title>SAIF
+❌ API did NOT return application/json
+This is exactly what causes Unexpected token '<'.
+
+============================================================
+ ❌ SENTINEL PRODUCTION LOCK FAILED
+============================================================
+
+Backup: /workspaces/a/saifrvw/.saifrvw-production-20260810-192339
+Log:    /workspaces/a/saifrvw/.saifrvw-production-20260810-192339.log

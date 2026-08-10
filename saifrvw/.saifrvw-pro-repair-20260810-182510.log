@@ -1,0 +1,91 @@
+
+======================================================================
+ SAIFRVW — SENTINEL PRO STABILITY + FUNCTIONALITY REPAIR
+ Existing-code aware • API protected • Transactional
+======================================================================
+
+[1/12] Verifying project...
+✓ Next.js project
+✓ App Router
+✓ /review
+✓ /api/analyze
+✓ /api/ai
+
+[2/12] Creating complete source backup...
+✓ Backup:
+/workspaces/a/saifrvw/.saifrvw-pro-repair-20260810-182510
+
+[3/12] Locking existing security APIs...
+✓ /api/analyze:
+c3bbdea45eca165829a1b8525378bb76968a28e45dbfea38b3e397b5c9f7e6f5
+✓ /api/ai:
+1c3c3c69869312abd623f00879a44c2edf66b9b640ce722cecbc4f52e80bc2fa
+
+[4/12] Inspecting installed lucide-react...
+✓ lucide-react installed
+
+[5/12] Repairing known /review build blocker...
+✓ /review unused declarations repaired
+
+[6/12] Checking for incompatible Github icon imports...
+
+[7/12] Checking protected APIs...
+✓ /api/analyze unchanged
+✓ /api/ai unchanged
+
+[8/12] Checking TypeScript source for obvious broken imports...
+✓ No shell-corruption markers found in TSX
+
+[9/12] Removing stale Next.js cache...
+✓ .next removed
+
+[10/12] Production build...
+
+> saifrvw@0.1.0 build
+> next build
+
+Attention: Next.js now collects completely anonymous telemetry regarding usage.
+This information is used to shape Next.js' roadmap and prioritize features.
+You can learn more, including how to opt-out if you'd not like to participate in this anonymous program, by visiting the following URL:
+https://nextjs.org/telemetry
+
+  ▲ Next.js 14.2.35
+  - Environments: .env.local
+
+   Creating an optimized production build ...
+ ✓ Compiled successfully
+   Linting and checking validity of types ...
+
+./src/app/review/page.tsx
+122:9  Warning: The 'findings' logical expression could make the dependencies of useMemo Hook (at line 130) change on every render. To fix this, wrap the initialization of 'findings' in its own useMemo() Hook.  react-hooks/exhaustive-deps
+122:9  Warning: The 'findings' logical expression could make the dependencies of useMemo Hook (at line 161) change on every render. To fix this, wrap the initialization of 'findings' in its own useMemo() Hook.  react-hooks/exhaustive-deps
+
+./src/components/SAIFRVWBrand.tsx
+4:7  Warning: Using `<img>` could result in slower LCP and higher bandwidth. Consider using `<Image />` from `next/image` to automatically optimize images. This may incur additional usage or cost from your provider. See: https://nextjs.org/docs/messages/no-img-element  @next/next/no-img-element
+
+info  - Need to disable some ESLint rules? Learn more here: https://nextjs.org/docs/basic-features/eslint#disabling-rules
+Failed to compile.
+
+./src/app/review/page.tsx:175:47
+Type error: Cannot find name 'AnalyzeResponse'.
+
+[0m [90m 173 |[39m       })[33m;[39m[0m
+[0m [90m 174 |[39m[0m
+[0m[31m[1m>[22m[39m[90m 175 |[39m       [36mconst[39m data [33m=[39m ([36mawait[39m response[33m.[39mjson()) [36mas[39m [33mAnalyzeResponse[39m[33m;[39m[0m
+[0m [90m     |[39m                                               [31m[1m^[22m[39m[0m
+[0m [90m 176 |[39m[0m
+[0m [90m 177 |[39m       [36mif[39m ([33m![39mresponse[33m.[39mok [33m||[39m [33m![39mdata[33m.[39mok [33m||[39m [33m![39mdata[33m.[39manalysis) {[0m
+[0m [90m 178 |[39m         [36mthrow[39m [36mnew[39m [33mError[39m(data[33m.[39merror [33m||[39m [32m"Analysis failed."[39m)[33m;[39m[0m
+Next.js build worker exited with code: 1 and signal: null
+
+======================================================================
+ BUILD FAILED — RESTORING WORKING SOURCE
+======================================================================
+✓ Source restored
+✓ Public assets restored
+✓ Package files restored
+✓ Next.js cache removed
+
+Backup:
+/workspaces/a/saifrvw/.saifrvw-pro-repair-20260810-182510
+
